@@ -1,0 +1,582 @@
+[
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Plastic",
+        "color": "Black",
+        "ageRange": "3-7 years",
+        "description": "A sleek Black racer designed for speed and agility on indoor tracks.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Out of Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 3.3,
+            "reviews": 95
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Urban Explorer",
+        "manufacturer": "FunToys Inc.",
+        "material": "Composite",
+        "color": "Red",
+        "ageRange": "4-8 years",
+        "description": "Rugged Red off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 21.99
+        },
+        "availability": "Limited Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 3.2,
+            "reviews": 22
+        },
+        "image": "https://www.littleriders.com.au/assets/alt_2/DK-F650-BK.jpg"
+    },
+    {
+        "name": "Canyon Cruiser",
+        "manufacturer": "FunToys Inc.",
+        "material": "Composite",
+        "color": "Blue",
+        "ageRange": "5-12 years",
+        "description": "A sleek Blue streetcar that shines under the moonlight, ideal for late-night races.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Limited Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 3.4,
+            "reviews": 38
+        },
+        "image": "https://www.huffy.com/media/catalog/product/g/m/gmc-canyon-12v-truck-17142-1.jpg"
+    },
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Metal",
+        "color": "Black",
+        "ageRange": "5-12 years",
+        "description": "An all-terrain Black machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 14.99
+        },
+        "availability": "In Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 4.9,
+            "reviews": 98
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Night Racer",
+        "manufacturer": "ToysGalore Inc.",
+        "material": "Plastic",
+        "color": "Green",
+        "ageRange": "5-12 years",
+        "description": "A sleek Green streetcar that shines under the moonlight, ideal for late-night races.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "Out of Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 4.6,
+            "reviews": 89
+        },
+        "image": "https://ibuygreat.co.uk/cdn/shop/products/Remote-Control-Advanced-Speed-Night-Racer-Car-4.jpg"
+    },
+    {
+        "name": "Urban Explorer",
+        "manufacturer": "Playtime Co.",
+        "material": "Alloy",
+        "color": "Black",
+        "ageRange": "3-7 years",
+        "description": "Rugged Black off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Limited Stock",
+        "category": "Toy Vehicles",
+        "ratings": {
+            "scale": 5,
+            "value": 3.5,
+            "reviews": 93
+        },
+        "image": "https://www.littleriders.com.au/assets/alt_2/DK-F650-BK.jpg"
+    },
+    {
+        "name": "Night Racer",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Composite",
+        "color": "Red",
+        "ageRange": "5-12 years",
+        "description": "A sleek Red streetcar that shines under the moonlight, ideal for late-night races.",
+        "price": {
+            "currency": "USD",
+            "amount": 16.99
+        },
+        "availability": "In Stock",
+        "category": "Toy Vehicles",
+        "ratings": {
+            "scale": 5,
+            "value": 3.1,
+            "reviews": 21
+        },
+        "image": "https://ibuygreat.co.uk/cdn/shop/products/Remote-Control-Advanced-Speed-Night-Racer-Car-4.jpg"
+    },
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "FastToys Inc.",
+        "material": "Metal",
+        "color": "Green",
+        "ageRange": "3-7 years",
+        "description": "A sleek Green racer designed for speed and agility on indoor tracks.",
+        "price": {
+            "currency": "USD",
+            "amount": 14.99
+        },
+        "availability": "Out of Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 3.9,
+            "reviews": 51
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Canyon Cruiser",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Plastic",
+        "color": "Green",
+        "ageRange": "4-8 years",
+        "description": "A sleek Green streetcar that shines under the moonlight, ideal for late-night races.",
+        "price": {
+            "currency": "USD",
+            "amount": 16.99
+        },
+        "availability": "Out of Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 3.2,
+            "reviews": 63
+        },
+        "image": "https://www.huffy.com/media/catalog/product/g/m/gmc-canyon-12v-truck-17142-1.jpg"
+    },
+    {
+        "name": "Speedster Racer",
+        "manufacturer": "FunToys Inc.",
+        "material": "Composite",
+        "color": "Black",
+        "ageRange": "5-12 years",
+        "description": "A vibrant Black vehicle for the young city adventurer.",
+        "price": {
+            "currency": "USD",
+            "amount": 16.99
+        },
+        "availability": "In Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.9,
+            "reviews": 60
+        },
+        "image": "https://i5.walmartimages.com/seo/Worx-Toys-Speedster-Race-car-colors-May-Vary_0f2e1e93-6d91-4c03-be90-175f3ddea157.c56d45d569c8dd700093bb62ad254c01.jpeg"
+    },
+    {
+        "name": "Night Racer",
+        "manufacturer": "Playtime Co.",
+        "material": "Composite",
+        "color": "Green",
+        "ageRange": "3-7 years",
+        "description": "Rugged Green off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 16.99
+        },
+        "availability": "Limited Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.0,
+            "reviews": 44
+        },
+        "image": "https://ibuygreat.co.uk/cdn/shop/products/Remote-Control-Advanced-Speed-Night-Racer-Car-4.jpg"
+    },
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "FastToys Inc.",
+        "material": "Metal",
+        "color": "Yellow",
+        "ageRange": "5-12 years",
+        "description": "An all-terrain Yellow machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 16.99
+        },
+        "availability": "In Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.0,
+            "reviews": 94
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Night Racer",
+        "manufacturer": "FunToys Inc.",
+        "material": "Alloy",
+        "color": "Black",
+        "ageRange": "4-8 years",
+        "description": "A sleek Black streetcar that shines under the moonlight, ideal for late-night races.",
+        "price": {
+            "currency": "USD",
+            "amount": 21.99
+        },
+        "availability": "Out of Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 3.5,
+            "reviews": 56
+        },
+        "image": "https://ibuygreat.co.uk/cdn/shop/products/Remote-Control-Advanced-Speed-Night-Racer-Car-4.jpg"
+    },
+    {
+        "name": "Urban Explorer",
+        "manufacturer": "Playtime Co.",
+        "material": "Alloy",
+        "color": "Green",
+        "ageRange": "3-7 years",
+        "description": "Rugged Green off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Out of Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.2,
+            "reviews": 97
+        },
+        "image": "https://www.littleriders.com.au/assets/alt_2/DK-F650-BK.jpg"
+    },
+    {
+        "name": "Canyon Cruiser",
+        "manufacturer": "FastToys Inc.",
+        "material": "Composite",
+        "color": "Red",
+        "ageRange": "3-7 years",
+        "description": "An all-terrain Red machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 21.99
+        },
+        "availability": "Out of Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 4.5,
+            "reviews": 25
+        },
+        "image": "https://www.huffy.com/media/catalog/product/g/m/gmc-canyon-12v-truck-17142-1.jpg"
+    },
+    {
+        "name": "Night Racer",
+        "manufacturer": "Playtime Co.",
+        "material": "Alloy",
+        "color": "Yellow",
+        "ageRange": "3-6 years",
+        "description": "A vibrant Yellow vehicle for the young city adventurer.",
+        "price": {
+            "currency": "USD",
+            "amount": 14.99
+        },
+        "availability": "Limited Stock",
+        "category": "Toy Vehicles",
+        "ratings": {
+            "scale": 5,
+            "value": 3.8,
+            "reviews": 16
+        },
+        "image": "https://ibuygreat.co.uk/cdn/shop/products/Remote-Control-Advanced-Speed-Night-Racer-Car-4.jpg"
+    },
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "Playtime Co.",
+        "material": "Metal",
+        "color": "Green",
+        "ageRange": "4-8 years",
+        "description": "A vibrant Green vehicle for the young city adventurer.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "In Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 3.2,
+            "reviews": 12
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Speedster Racer",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Plastic",
+        "color": "Blue",
+        "ageRange": "4-8 years",
+        "description": "Rugged Blue off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Out of Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.8,
+            "reviews": 25
+        },
+        "image": "https://i5.walmartimages.com/seo/Worx-Toys-Speedster-Race-car-colors-May-Vary_0f2e1e93-6d91-4c03-be90-175f3ddea157.c56d45d569c8dd700093bb62ad254c01.jpeg"
+    },
+    {
+        "name": "Urban Explorer",
+        "manufacturer": "ToysGalore Inc.",
+        "material": "Composite",
+        "color": "Green",
+        "ageRange": "3-7 years",
+        "description": "A sleek Green streetcar that shines under the moonlight, ideal for late-night races.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "In Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.1,
+            "reviews": 49
+        },
+        "image": "https://www.littleriders.com.au/assets/alt_2/DK-F650-BK.jpg"
+    },
+    {
+        "name": "Canyon Cruiser",
+        "manufacturer": "Playtime Co.",
+        "material": "Plastic",
+        "color": "Black",
+        "ageRange": "3-7 years",
+        "description": "An all-terrain Black machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 14.99
+        },
+        "availability": "Out of Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 4.2,
+            "reviews": 65
+        },
+        "image": "https://www.huffy.com/media/catalog/product/g/m/gmc-canyon-12v-truck-17142-1.jpg"
+    },
+    {
+        "name": "Speedster Racer",
+        "manufacturer": "Playtime Co.",
+        "material": "Metal",
+        "color": "Yellow",
+        "ageRange": "3-6 years",
+        "description": "Rugged Yellow off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 16.99
+        },
+        "availability": "In Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 3.8,
+            "reviews": 20
+        },
+        "image": "https://i5.walmartimages.com/seo/Worx-Toys-Speedster-Race-car-colors-May-Vary_0f2e1e93-6d91-4c03-be90-175f3ddea157.c56d45d569c8dd700093bb62ad254c01.jpeg"
+    },
+    {
+        "name": "Urban Explorer",
+        "manufacturer": "Playtime Co.",
+        "material": "Metal",
+        "color": "Yellow",
+        "ageRange": "3-7 years",
+        "description": "An all-terrain Yellow machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "In Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 4.4,
+            "reviews": 42
+        },
+        "image": "https://www.littleriders.com.au/assets/alt_2/DK-F650-BK.jpg"
+    },
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "FunToys Inc.",
+        "material": "Alloy",
+        "color": "Yellow",
+        "ageRange": "4-8 years",
+        "description": "An all-terrain Yellow machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 21.99
+        },
+        "availability": "In Stock",
+        "category": "Educational",
+        "ratings": {
+            "scale": 5,
+            "value": 3.5,
+            "reviews": 46
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Night Racer",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Plastic",
+        "color": "Yellow",
+        "ageRange": "3-6 years",
+        "description": "An all-terrain Yellow machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Out of Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 5.0,
+            "reviews": 58
+        },
+        "image": "https://ibuygreat.co.uk/cdn/shop/products/Remote-Control-Advanced-Speed-Night-Racer-Car-4.jpg"
+    },
+    {
+        "name": "Canyon Cruiser",
+        "manufacturer": "FunToys Inc.",
+        "material": "Plastic",
+        "color": "Black",
+        "ageRange": "3-7 years",
+        "description": "A vibrant Black vehicle for the young city adventurer.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "Out of Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 4.5,
+            "reviews": 19
+        },
+        "image": "https://www.huffy.com/media/catalog/product/g/m/gmc-canyon-12v-truck-17142-1.jpg"
+    },
+    {
+        "name": "Urban Explorer",
+        "manufacturer": "FunToys Inc.",
+        "material": "Composite",
+        "color": "Black",
+        "ageRange": "4-8 years",
+        "description": "Rugged Black off-roader perfect for conquering rocky terrains.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Limited Stock",
+        "category": "Classic Toys",
+        "ratings": {
+            "scale": 5,
+            "value": 3.8,
+            "reviews": 31
+        },
+        "image": "https://www.littleriders.com.au/assets/alt_2/DK-F650-BK.jpg"
+    },
+    {
+        "name": "Speedster Racer",
+        "manufacturer": "FastToys Inc.",
+        "material": "Plastic",
+        "color": "Blue",
+        "ageRange": "4-8 years",
+        "description": "A vibrant Blue vehicle for the young city adventurer.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "In Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 4.0,
+            "reviews": 36
+        },
+        "image": "https://i5.walmartimages.com/seo/Worx-Toys-Speedster-Race-car-colors-May-Vary_0f2e1e93-6d91-4c03-be90-175f3ddea157.c56d45d569c8dd700093bb62ad254c01.jpeg"
+    },
+    {
+        "name": "Off-Road Adventurer",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Composite",
+        "color": "Blue",
+        "ageRange": "3-7 years",
+        "description": "An all-terrain Blue machine, ready for any outdoor adventure.",
+        "price": {
+            "currency": "USD",
+            "amount": 18.99
+        },
+        "availability": "Out of Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 4.8,
+            "reviews": 83
+        },
+        "image": "https://www.outdoortoys.com/cdn/shop/products/desert-adventurer-24v-childrens-utv-off-road-style-ride-on-buggy-735930_1024x.jpg"
+    },
+    {
+        "name": "Canyon Cruiser",
+        "manufacturer": "Outdoor Fun Inc.",
+        "material": "Metal",
+        "color": "Blue",
+        "ageRange": "4-8 years",
+        "description": "A vibrant Blue vehicle for the young city adventurer.",
+        "price": {
+            "currency": "USD",
+            "amount": 19.99
+        },
+        "availability": "Out of Stock",
+        "category": "Remote Control",
+        "ratings": {
+            "scale": 5,
+            "value": 3.5,
+            "reviews": 52
+        },
+        "image": "https://www.huffy.com/media/catalog/product/g/m/gmc-canyon-12v-truck-17142-1.jpg"
+    }
+]
