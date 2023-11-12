@@ -39,9 +39,13 @@ async function run() {
     client.connect();
 
     const productsCollection = client.db("toyCorner").collection("products");
+    const ordersCollection = client.db("toyCorner").collection("orders");
+    const wishlistCollection = client.db("toyCorner").collection("wishlist");
 
     app.get("/products", async (req, res) => {
-      const cursor = productsCollection.find();
+      const limit = parseInt(req.query.limit);
+      console.log(limit);
+      const cursor = productsCollection.find().limit(limit);
       const result = await cursor.toArray();
       res.send(result);
     })
