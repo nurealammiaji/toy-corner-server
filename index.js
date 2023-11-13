@@ -58,6 +58,14 @@ async function run() {
       res.send(result);
     })
 
+    app.get("/products/categories/:category", async(req, res) => {
+      const category = req.params.category;
+      const query = {category: category};
+      const cursor = productsCollection.find(query);
+      const result = await cursor.toArray();
+      res.send(result);
+    })
+
     app.post("/orders", (req, res) => {
       const info = req.body;
       const order = {
