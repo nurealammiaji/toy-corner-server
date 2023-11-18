@@ -44,7 +44,6 @@ async function run() {
 
     app.get("/products", async (req, res) => {
       const limit = parseInt(req.query.limit);
-      console.log(limit);
       const cursor = productsCollection.find().limit(limit);
       const result = await cursor.toArray();
       res.send(result);
@@ -52,43 +51,50 @@ async function run() {
 
     app.get("/products/:id", async(req, res) => {
       const id = req.params.id;
-      console.log(id);
       const query = {_id: new ObjectId(id)};
       const result = await productsCollection.findOne(query);
       res.send(result);
     })
 
+    app.post("/products", async(req, res) => {
+      const toy = req.body;
+      console.log(toy);
+      const result = await productsCollection.insertOne(toy);
+      res.send(result);
+      console.log(result);
+    })
+
     app.get("/products/categories/:category", async(req, res) => {
       const category = req.params.category;
-      const query = {category: category};
+      const query = {material: category};
       const cursor = productsCollection.find(query);
       const result = await cursor.toArray();
       res.send(result);
     })
 
-    app.post("/orders", (req, res) => {
-      const info = req.body;
-      const order = {
-        productName: info.productName,
-        productPrice: info.productPrice,
-        productColor: info.productColor,
-        productImage: info.productImage,
-        productManufacturer: info.productManufacturer,
-        productMaterial: info.productMaterial,
+    app.post("/orders", async (req, res) => {
+      const order = req.body;
+      const newOrder = {
+        productName: order.productName,
+        productPrice: order.productPrice,
+        productColor: order.productColor,
+        productImage: order.productImage,
+        productManufacturer: order.productManufacturer,
+        productMaterial: order.productMaterial,
         customerDetails: {
-          name: info.customerDetails.name,
-          email: info.customerDetails.email,
-          phone: info.customerDetails.phone
+          name: order.customerDetails.name,
+          email: order.customerDetails.email,
+          phone: order.customerDetails.phone
         }
       };
-      const result = ordersCollection.insertOne(order);
+      const result = await ordersCollection.insertOne(newOrder);
       res.send(result);
       console.log(result);
     })
 
-    app.get("/orders", (req, res) => {
+    app.get("/orders", async(req, res) => {
       const cursor = ordersCollection.find();
-      const result = cursor.toArray(cursor);
+      const result = await cursor.toArray(cursor);
       res.send(result);
     })
 
