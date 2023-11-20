@@ -42,6 +42,7 @@ async function run() {
     const ordersCollection = client.db("toyCorner").collection("orders");
     const wishlistCollection = client.db("toyCorner").collection("wishlist");
 
+    // All Products
     app.get("/products", async (req, res) => {
       const limit = parseInt(req.query.limit);
       const cursor = productsCollection.find().limit(limit);
@@ -49,6 +50,7 @@ async function run() {
       res.send(result);
     })
 
+    // Single Product
     app.get("/products/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
@@ -56,20 +58,23 @@ async function run() {
       res.send(result);
     })
 
+    // Add Product
     app.post("/products", async (req, res) => {
       const toy = req.body;
       const result = await productsCollection.insertOne(toy);
       res.send(result);
     })
 
+    // Product Category
     app.get("/products/categories/:category", async (req, res) => {
-      const category = req.params.category;
-      const query = { material: category };
+      const subCategory = req.params.category;
+      const query = { subCategory: subCategory };
       const cursor = productsCollection.find(query);
       const result = await cursor.toArray();
       res.send(result);
     })
 
+    // Seller Product
     app.get("/products/seller/:email", async (req, res) => {
       const email = req.params.email;
       const query = { sellerEmail: email };
@@ -78,13 +83,31 @@ async function run() {
       res.send(result);
     })
 
-    app.delete("/products/seller/:id", async(req, res) => {
+    // Product Delete
+    app.delete("/products/seller/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id: new ObjectId(id)};
+      const query = { _id: new ObjectId(id) };
       const result = await productsCollection.deleteOne(query);
       res.send(result);
     })
 
+    // Product Search
+    app.get("/products/search/:text", async (req, res) => {
+      const text = req.params.text;
+      const cursor = productsCollection.find(
+        {
+          "$or": [
+            {name: {$regex: text}},
+            {category: {$regex: text}},
+            {subCategory: {$regex: text}}
+          ]
+        }
+      );
+      const result = await cursor.toArray();
+      res.send(result);
+    })
+
+    // Add Order
     app.post("/orders", async (req, res) => {
       const order = req.body;
       const newOrder = {
@@ -104,6 +127,7 @@ async function run() {
       res.send(result);
     })
 
+    // Orders
     app.get("/orders", async (req, res) => {
       const cursor = ordersCollection.find();
       const result = await cursor.toArray(cursor);
