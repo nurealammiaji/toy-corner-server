@@ -5,14 +5,35 @@ const jwt = require("jsonwebtoken");
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 
+// Variables
+const port = process.env.PORT || 5000;
+const username = process.env.DB_USER;
+const password = process.env.DB_PASS;
+const secret = process.env.ACCESS_TOKEN_SECRET;
+
 // Middlewares
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 5000;
-const username = process.env.DB_USER;
-const password = process.env.DB_PASS;
+const verifyJWT = (req, res, next) => {
+  const authorization = req.headers.authorization;
+  let token;
+  if (!authorization) {
+    res.status(401).send({ error: true, message: "Unauthorized Access !!" });
+  }
+  if (authorization) {
+    token = authorization.split(" ")[1];
+  }
+  jwt.verify(token, secret, (error, decoded) => {
+    if (error) {
+      return res.status(401).send({ error: 1, message: "Unauthorized Access !!" });
+    }
+    req.decoded = decoded;
+    next();
+  })
+}
 
+// Server Config
 app.get("/", (req, res) => {
   res.send("Toy Corner Server");
 })
@@ -42,6 +63,13 @@ async function run() {
     const ordersCollection = client.db("toyCorner").collection("orders");
     const wishlistCollection = client.db("toyCorner").collection("wishlist");
     const blogCollection = client.db("toyCorner").collection("blog");
+
+    // JWT
+    app.post("/jwt", (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, secret, { expiresIn: '1h' });
+      res.send({ token });
+    })
 
     // All Products
     app.get("/products", async (req, res) => {
@@ -75,10 +103,17 @@ async function run() {
       res.send(result);
     })
 
-    // Seller Product
-    app.get("/products/seller/:email", async (req, res) => {
+    // Seller Product with JWT Verification
+    app.get("/products/seller/:email", verifyJWT, async (req, res) => {
+      let query = {};
+      const user = req.decoded.user;
       const email = req.params.email;
-      const query = { sellerEmail: email };
+      if (user !== email) {
+        return res.status(403).send({ error: 1, message: "Forbidden Access !!" });
+      }
+      if (user === email) {
+        query = { sellerEmail: email };
+      }
       const cursor = productsCollection.find(query);
       const result = await cursor.toArray();
       res.send(result);
