@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const { query } = require("express");
 const app = express();
 
 // Variables
@@ -202,7 +203,9 @@ async function run() {
 
     // Blog
     app.get("/blog", async (req, res) => {
-      const cursor = blogCollection.find();
+      const id = req.query.id;
+      const query = {_id: new ObjectId(id)};
+      const cursor = blogCollection.find(query);
       const result = await cursor.toArray();
       res.send(result);
     })
