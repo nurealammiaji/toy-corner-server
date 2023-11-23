@@ -201,10 +201,17 @@ async function run() {
       res.send(result);
     })
 
-    // Blog
+    // Blog Posts
     app.get("/blog", async (req, res) => {
-      const id = req.query.id;
-      const query = {_id: new ObjectId(id)};
+      const cursor = blogCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    })
+
+    // Single Blog Post
+    app.get("/blog/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
       const cursor = blogCollection.find(query);
       const result = await cursor.toArray();
       res.send(result);
