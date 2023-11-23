@@ -95,6 +95,35 @@ async function run() {
       res.send(result);
     })
 
+    // Update Product
+    app.put("/products/:id", async(req, res) => {
+      const id = req.params.id;
+      const product = req.body;
+      console.log(product);
+      const filter = { _id: new ObjectId(id) };
+      // const options = {upsert: true};
+      const updateProduct = {
+        $set: {
+          name: product.name,
+          manufacturer: product.manufacturer,
+          seller: product.seller,
+          sellerEmail: product.sellerEmail,
+          subCategory: product.subCategory,
+          color: product.color,
+          ageRange: product.ageRange,
+          description: product.description,
+          price: product.price,
+          availability: product.availability,
+          category: product.category,
+          ratings: product.ratings,
+          quantity: product.quantity,
+          image: product.image
+        }
+      }
+      const result = await productsCollection.updateOne(filter, updateProduct);
+      res.send(result);
+    })
+
     // Product Category
     app.get("/products/categories/:category", async (req, res) => {
       const subCategory = req.params.category;
