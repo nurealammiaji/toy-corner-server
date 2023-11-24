@@ -68,14 +68,22 @@ async function run() {
     // JWT
     app.post("/jwt", (req, res) => {
       const user = req.body;
-      const token = jwt.sign(user, secret, { expiresIn: '1h' });
+      const token = jwt.sign(user, secret, { expiresIn: '1d' });
       res.send({ token });
     })
 
     // All Products
     app.get("/products", async (req, res) => {
+      const sort = req.query.sort;
       const limit = parseInt(req.query.limit);
-      const cursor = productsCollection.find().limit(limit);
+      let query = {};
+      if (sort === "ascending") {
+        query = {name: 1}
+      }
+      if (sort === "descending") {
+        query = {name: -1}
+      }
+      const cursor = productsCollection.find().sort(query).limit(limit);
       const result = await cursor.toArray();
       res.send(result);
     })
