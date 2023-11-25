@@ -76,6 +76,11 @@ async function run() {
     app.get("/products", async (req, res) => {
       const sort = req.query.sort;
       const limit = parseInt(req.query.limit);
+      const text = req.query.search;
+      const search = {};
+      if (text) {
+        search = {name: {$regex: text, $options: "i"}};
+      }
       let query = {};
       if (sort === "ascending") {
         query = { name: 1 };
@@ -86,7 +91,7 @@ async function run() {
       if (sort === "default") {
         query = {};
       }
-      const cursor = productsCollection.find().sort(query).limit(limit);
+      const cursor = productsCollection.find(search).sort(query).limit(limit);
       const result = await cursor.toArray();
       res.send(result);
     })
