@@ -78,10 +78,13 @@ async function run() {
       const limit = parseInt(req.query.limit);
       let query = {};
       if (sort === "ascending") {
-        query = {name: 1}
+        query = { name: 1 };
       }
       if (sort === "descending") {
-        query = {name: -1}
+        query = { name: -1 };
+      }
+      if (sort === "default") {
+        query = {};
       }
       const cursor = productsCollection.find().sort(query).limit(limit);
       const result = await cursor.toArray();
@@ -104,7 +107,7 @@ async function run() {
     })
 
     // Update Product
-    app.put("/products/:id", async(req, res) => {
+    app.put("/products/:id", async (req, res) => {
       const id = req.params.id;
       const product = req.body;
       console.log(product);
@@ -171,7 +174,7 @@ async function run() {
       const cursor = productsCollection.find(
         {
           "$or": [
-            { name: { $regex: text } },
+            { name: { $regex: text, $options: "i" } },
             // {category: {$regex: text}},
             // {subCategory: {$regex: text}}
           ]
