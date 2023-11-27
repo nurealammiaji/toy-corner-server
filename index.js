@@ -61,8 +61,9 @@ async function run() {
     client.connect();
 
     const productsCollection = client.db("toyCorner").collection("products");
-    const ordersCollection = client.db("toyCorner").collection("orders");
     const wishlistCollection = client.db("toyCorner").collection("wishlist");
+    const cartCollection = client.db("toyCorner").collection("cart");
+    const ordersCollection = client.db("toyCorner").collection("orders");
     const blogCollection = client.db("toyCorner").collection("blog");
 
     // JWT
@@ -79,7 +80,7 @@ async function run() {
       const text = req.query.search;
       const search = {};
       if (text) {
-        search = {name: {$regex: text, $options: "i"}};
+        search = { name: { $regex: text, $options: "i" } };
       }
       let query = {};
       if (sort === "ascending") {
@@ -191,22 +192,18 @@ async function run() {
 
     // Add to Wishlist
     app.post("/wishlist", async (req, res) => {
-      const order = req.body;
-      const newOrder = {
-        productName: order.productName,
-        productPrice: order.productPrice,
-        productColor: order.productColor,
-        productImage: order.productImage,
-        productManufacturer: order.productManufacturer,
-        productMaterial: order.productMaterial,
-        customerEmail: order.customerEmail,
-        customerDetails: {
-          name: order.customerDetails.name,
-          phone: order.customerDetails.phone,
-          address: order.customerDetails.address
-        }
+      const wish = req.body;
+      const newWish = {
+        productId: wish.productId,
+        productName: wish.productName,
+        productPrice: wish.productPrice,
+        productColor: wish.productColor,
+        productImage: wish.productImage,
+        productManufacturer: wish.productManufacturer,
+        productMaterial: wish.productMaterial,
+        customerEmail: wish.customerEmail,
       };
-      const result = await wishlistCollection.insertOne(newOrder);
+      const result = await wishlistCollection.insertOne(newWish);
       res.send(result);
     })
 
@@ -219,27 +216,60 @@ async function run() {
       res.send(result);
     })
 
+    // Add to Cart
+    app.post("/cart", async (req, res) => {
+      const cart = req.body;
+      const newCart = {
+        productId: cart.productId,
+        productName: cart.productName,
+        productPrice: cart.productPrice,
+        productColor: cart.productColor,
+        productImage: cart.productImage,
+        productManufacturer: cart.productManufacturer,
+        productMaterial: cart.productMaterial,
+        customerEmail: cart.customerEmail,
+      };
+      const result = await wishlistCollection.insertOne(newCart);
+      res.send(result);
+    })
+
+    // Cart
+    app.get("/cart/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { customerEmail: email };
+      const cursor = cartCollection.find(query);
+      const result = await cursor.toArray(cursor);
+      res.send(result);
+    })
+
     // Product Order
     app.post("/orders", async (req, res) => {
       const order = req.body;
       const newOrder = {
+        productId: order.productId,
         productName: order.productName,
         productPrice: order.productPrice,
         productColor: order.productColor,
         productImage: order.productImage,
         productManufacturer: order.productManufacturer,
         productMaterial: order.productMaterial,
-        customerDetails: {
-          name: order.customerDetails.name,
-          email: order.customerDetails.email,
-          phone: order.customerDetails.phone
-        }
+        customerEmail: order.customerEmail,
+        customerDetails: order.customerDetails
       };
       const result = await ordersCollection.insertOne(newOrder);
       res.send(result);
     })
 
-    // Orders List
+    // Order
+    app.get("/orders/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { customerEmail: email };
+      const cursor = ordersCollection.find(query);
+      const result = await cursor.toArray(cursor);
+      res.send(result);
+    })
+
+    // All Orders List
     app.get("/orders", async (req, res) => {
       const cursor = ordersCollection.find();
       const result = await cursor.toArray(cursor);
