@@ -250,6 +250,14 @@ async function run() {
       res.send(result);
     })
 
+    // Single Cart Item
+    app.get("/cart/items/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)};
+      const result = await cartCollection.findOne(query);
+      res.send(result);
+    })
+
     // Cart Delete
     app.delete("/cart/items/:id", async (req, res) => {
       const id = req.params.id;
