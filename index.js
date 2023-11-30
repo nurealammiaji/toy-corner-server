@@ -216,6 +216,14 @@ async function run() {
       res.send(result);
     })
 
+    // Wishlist Delete
+    app.delete("/wishlist/items/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await wishlistCollection.deleteOne(query);
+      res.send(result);
+    })
+
     // Add to Cart
     app.post("/cart", async (req, res) => {
       const cart = req.body;
@@ -229,7 +237,7 @@ async function run() {
         productMaterial: cart.productMaterial,
         customerEmail: cart.customerEmail,
       };
-      const result = await wishlistCollection.insertOne(newCart);
+      const result = await cartCollection.insertOne(newCart);
       res.send(result);
     })
 
@@ -239,6 +247,14 @@ async function run() {
       const query = { customerEmail: email };
       const cursor = cartCollection.find(query);
       const result = await cursor.toArray(cursor);
+      res.send(result);
+    })
+
+    // Cart Delete
+    app.delete("/cart/items/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      const result = await cartCollection.deleteOne(query);
       res.send(result);
     })
 
