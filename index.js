@@ -78,7 +78,7 @@ async function run() {
       const sort = req.query.sort;
       const limit = parseInt(req.query.limit);
       const text = req.query.search;
-      const search = {};
+      let search = {};
       if (text) {
         search = { name: { $regex: text, $options: "i" } };
       }
